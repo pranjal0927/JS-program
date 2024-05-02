@@ -1,7 +1,7 @@
 
 
 function choice(){
-    let input = +prompt("enter the choice")
+    let input = +prompt("1. Addition \n 2. Substraction \n 3. Multiplication \n 4. Division \n 5. Exit \n enter the choice")
 
     console.log('choice :', input);
     if( input == 5)

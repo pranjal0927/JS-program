@@ -11,7 +11,5 @@ while(num > 0)
     rev = rev * 10 + rem
     num = Math.trunc(num / 10)
 }   
-
-
-    console.log(rev)
+console.log(rev)
 

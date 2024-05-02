@@ -1,29 +1,31 @@
 // add first five odd number
 
-let no = 50
-let issPrime = false
+let no = 10
+let isOdd = false
 let count = 1
 let sum = 0
 let i 
-for (i = 1; i < 50; i++) {
+for (i = 1; i <= no; i++) {
     for(let j = 1; j <= i; j++ )
     {
-        if( i % j == 0)
+        if( i % 2 == 0)
         {
-            issPrime = false
+            isOdd = false
             count++
         }
         else{
-            issPrime = true
+            isOdd = true
+            console.log('yes', i);
             count++
         }
     } 
-    if(issPrime)
+    if(isOdd)
     {
-        if(count < 6)
+        if(count > 6)
         {
             sum = sum + i
         }
     }   
 }
+
 console.log(sum)

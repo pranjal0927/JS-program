@@ -1,20 +1,23 @@
 // prime number
+let num1 = 1
+let num2 = 30
 
-let num = +prompt('enter number')
-// let num = 10
-let isPrime = false
+for(let i = num1; i <= num2; i++)
+{
+    let flag = 0
 
-for (i = 2; i <= num; i++) {
-    if (num % i == 0) {
-        isPrime = false
-        break;
+    for(let j = 2; j < i; j++)
+    {
+        if( i % j == 0)
+        {
+            flag = 1
+            break;
+        }
+
     }
-}
-
-if (isPrime)
-    console.log('is not a prime number');
-
-    else
-    console.log('is a prime number');
-
+    if(i > 1 && flag == 0)
+    {
+        console.log(i)
+    }
+}   
 

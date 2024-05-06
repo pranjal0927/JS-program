@@ -12,3 +12,6 @@ let dummyTextIncludes = dummyText.includes()    //check if the string content le
 
 
 
+let para = `hello how are you 
+        hi am fine`
+        console.log(para)

@@ -20,6 +20,8 @@ for(let i = 1;i <= n; i++)
     }
     console.log(str)
 
+
+
     for(let i =n - 1;i >= 1; i--)
     {
      for(let j = n;j > i; j--)

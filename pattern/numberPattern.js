@@ -122,20 +122,20 @@
 
 
 
-let res= ''
+// let res= ''
 
-for(let i =1; i<= 5;i++ )
-    {
-        for(let j = 1;j < i;j++)
-            {
-                res +=" "
+// for(let i =1; i<= 5;i++ )
+//     {
+//         for(let j = 1;j < i;j++)
+//             {
+//                 res +=" "
 
-            }
+//             }
            
-        for(let k = 5; k >= i;k--)
-            {
-                res += k
-            }
-            res +=`\n`
-        }
-    console.log(res)
+//         for(let k = 5; k >= i;k--)
+//             {
+//                 res += k
+//             }
+//             res +=`\n`
+//         }
+//     console.log(res)

@@ -42,24 +42,58 @@ let num = 20
 // evenOddNo(  )
 
 
-let no = 50
-let count = 1
-let sum = 0
-let oddNo = () => {
+// let no = 50
+// let count = 1
+// let sum = 0
+// let oddNo = () => {
 
-        for( let i = 0; i <= no; i++)
+//         for( let i = 0; i <= no; i++)
+//         {
+//             if(no % 2 != 0)
+//             {
+//                 sum += i
+//                 count++                
+//             }
+//             if(count > 5)
+//             {
+//                 break
+//             }
+//         }
+//         return sum 
+//     }
+//  let result = oddNo ();
+//  console.log( result)
+
+
+//range 10 to 20 and 50 to 60 
+//find count sum and number
+
+
+function oddNumber()
+{
+    let count = 0
+    let sum = 0
+
+
+    for(let i = 1; i<= 100; i++)
         {
-            if(no % 2 != 0)
-            {
-                sum += i
-                count++                
-            }
-            if(count > 5)
-            {
-                break
-            }
+            if(i >= 10 && i <=20 || i >= 50 && i <=60)
+                {
+                    if(i % 2 != 0)
+                        {
+
+                            console.log(`odd number`,i)
+                            count++
+                        }
+                        
+           
+                        sum = sum + i
+                }
+
+
         }
-        return sum 
+        console.log(`\n`)
+        console.log(`sum is:`,sum)
+        console.log(`count is:`, count)
     }
- let result = oddNo ();
- console.log( result)
+oddNumber()

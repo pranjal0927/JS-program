@@ -1,17 +1,22 @@
 // count number required for user input No
 
-let amount = +prompt("enter number")
+// let amount = +prompt("enter number")
+
+
+    let amount = 4800
 
 if (amount >= 2000) {
     num = Math.trunc(amount / 2000)
     amount = amount % 2000
     console.log(" 2000 notes:" + "  " + num)
+    console.log(amount);
 
 }
 if (amount >= 500) {
     num = Math.trunc(amount / 500)
     amount = amount % 500
     console.log(" 500 notes:" + "  " + num)
+    console.log(amount);
 
 }
 if (amount >= 200) {

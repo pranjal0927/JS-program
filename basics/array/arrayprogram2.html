@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<h1>array program</h1>
+    <script>
+
+        let arr = [
+            {name:'utsav', sal:1000, age:25, address:'delhi'},
+            {name:'vicky', sal:1500,age:23, address:'odisha'},
+            {name:'d', sal:800,age:24, address:'delhi'},
+            {name:'c', sal: 700, age: 27, address:'nepal'},
+            {name:'utsav', sal:2000, age:30, address:'jaipur'},
+            {name:'utx', sal:3000, age:25, address:'jaipur'}
+        ]
+
+        // 1.wap to print all emp name
+        // result = arr.map((item)=>{
+        //     return item.name
+        // })
+
+        // console.log("result)
+
+        //2.wap to find max sal
+
+   
+        // let res = arr.reduce((acc , item) =>{
+        //     if(item.sal > acc.sal)
+        //     {
+        //         acc = item
+        //     }
+        //         return acc
+        // })
+        
+        // console.log(res.name)
+
+
+        // 3.wap to find min sal
+
+   
+        // let res = arr.reduce((acc , item) =>{
+        //     if(item.sal < acc.sal)
+        //     {
+        //         acc = item
+        //     }
+        //         return acc
+        // })
+        
+        // console.log(res.name, res.sal)
+
+
+
+
+        // 4.wap to print all emp their address is "delhi"
+
+                // let res = arr.find((item)=>{
+
+                //     if(item.address == "delhi")
+                //     {
+                //         console.log(item)
+                //     }
+                // })
+                //     console.log(res)
+
+        // 5.wap to find emp age >= 25            
+                // let res = arr.find((item)=>{
+                //     if(item.age>=25)
+                //     {
+                //         console.log(item)
+                //     }
+                // })
+                 // console.log(res)
+                
+        // 6.wap to total salary
+            // let sum = 0
+            // let res = arr.map((item)=>{
+            //     sum += item.sal
+            // })
+            // console.log(sum)
+
+            // *******
+
+            // let arr1 =[1,23,4,56,7]
+            // let sum=0
+            // let res = arr.reduce((acc, item)=>{
+
+            //     sum = acc.sal + item.sal
+
+            // })  
+            // console.log(sum)
+
+            // 7.wap to find avg salary
+
+
+            // let sum = arr.reduce((acc, item) => acc + item.sal, 0);
+            // let avg = sum / arr.length;
+
+            // console.log("Average salary:", avg);
+
+
+            // 8.wap to find total emp count
+                // let len = arr.length;
+                // console.log(len)
+
+
+            // 9.wap emp their name is d I have to replace name with D_company
+
+            // arr.forEach((item)=>{
+            //     if(item.name =="d"){
+
+            //         item.name="d_company"
+            //     }
+            // })
+
+            // console.log(arr)
+
+
+            // 10.wap all emp in their name 'ut' word is included
+
+                // let res= arr.map(item =>{
+                //     return {name:"ut" + item.name}
+                // })
+                // console.log(res);
+
+
+            // 11.sort all emp in ascending according to their sal
+                // let res = arr.sort((a,b)=>{
+                //     return a.sal - b.sal
+                // })
+                // console.log(res)
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container" id="container">
+        <h1 id="head1">hello world</h1>
+        <h1 id="head2">hello world</h1>
+        <h1 id="head3">hello world</h1>
+        <p id="para1">i am Fine</p>
+        <p id="para2">i am Fine</p>
+        <p id="para3">i am Fine</p>
+    </div>
+
+
+    <script>
+
+                    //parent
+            // parentNode and parentElement
+
+        // let head1 = document.getElementById("head1")
+
+        // console.log(head1.parentNode)
+        // console.log(head1.parentElement)
+
+        // head1.parentElement.style.color="blue";
+        // head1.parentNode.style.background ="red"
+
+
+                    // child
+           // childNode and childElement
+    
+// let res = document.getElementsByClassName("container")
+//         for(let i of res) console.log(res[0].children)
+
+        
+   let container = document.getElementById("container")
+    // console.log(container.childNodes)
+    // console.log(container.child)
+
+    // console.log(container.childElementCount)                //6
+
+    // console.log(container.nodeName)                         //DIV
+
+    // console.log(container.nodeType);
+
+    console.log(container.child[2]);
+
+        //first child
+
+    console.log(container.firstChild); 
+
+    </script>
+
+
+
+
+
+</body>
+</html>

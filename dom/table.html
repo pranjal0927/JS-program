@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<table id="tab1"></table>
+<!-- <h1 style="position: ;"></h1> -->
+
+<script>
+
+let table = document.getElementById("tab1")
+console.log(table)
+let tr ;
+let td;         
+
+for(let i = 1; i< 5;i++){
+    tr = document.createElement("tr")
+    table.append(tr)
+    if(i%2 == 0){
+        tr.style.background="yellow"
+    }
+    else
+        tr.style.background ="red"
+
+    for(let j = 1; j <4; j++){
+    td = document.createElement("td");
+    tr.append(td);
+    td.innerText = `lorem${Math.trunc(Math.random()*10)}`;
+    td.style.border ="2px solid blue";
+    td.style.padding ="10x";
+
+}
+
+    }
+
+
+
+
+
+</script>
+
+    
+</body>
+</html>

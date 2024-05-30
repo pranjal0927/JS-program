@@ -1,50 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
+    <style>
 
+#container{
+    background: blue;
+    height: 200px;
+    width: 500px;
+    display: flex;
+}
+.design{
+    height: 100px;
+    width: 100px;
 
-    
-</style>
+}
 
-
+    </style>
 </head>
 <body>
-    
+    <div id="container">
+    </div>
+    <script>
+        let result = document.getElementById("container");
+        let str = ''
+        for (let i = 0; i < 10; i++) {
+            let random = Math.trunc(Math.random() * 100)
 
-<div id="container">
+            str += `<div class="design" style="background-color :rgb(${random * 10},${random - 200},${random - 50})"> unique text ${i}</div>`
 
-
-</div>
-
-
-<script>
-
-let result = document.getElementById("container");
-let str=''
-for(let i =0; i<10;i++)
-{
-    let random = Math.trunc(Math.random()*100)
-    
-    str+=`<div class="design" style="background-color :rgb(${random*10},${random-200},${random-50})"> unique text ${i}</div>`
-
-}    
-container.innerHTML=str
-
-    
-
-
-
-
-
-</script>
-
-
-
-
-
+        }
+        container.innerHTML = str
+    </script>
 </body>
+
 </html>

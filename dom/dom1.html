@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+        img:hover{
+        background: red;
+
+    }
+
+</style>
+</head>
+<body>
+        <table id="tab"></table>
+
+    </div>
+
+<script>
+
+let arr = [
+            {name:'Football',url1:'https://cdn.britannica.com/51/190751-131-B431C216/soccer-ball-goal.jpg',url2:'https://en.wikipedia.org/wiki/Football'},
+            {name:'Cricket',url1:'https://www.healthkart.com/connect/wp-content/uploads/2022/04/900x500_thumbnail_HK-HealthKart-Premier-League-Day-2.png',url2:'https://en.wikipedia.org/wiki/Cricket'},
+            {name:'Volleyball',url1:'https://cdn.britannica.com/81/198481-050-10CED2D9/Gilberto-Godoy-Filho-ball-Brazil-Argentina-volleyball-2007.jpg',url2:'https://en.wikipedia.org/wiki/Volleyball'},
+            {name:'Hockey',url1:'https://img.etimg.com/thumb/width-640,height-480,imgsize-15378,resizemode-75,msid-102153931/news/sports/indian-mens-hockey-team-records-1-1-draw-with-netherlands.jpg',url2:'https://en.wikipedia.org/wiki/Hockey'},
+            {name:'Badminton',url1:'https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_xl_2x/f_auto/primary/tdslyl0pptzs6vst4uq5',url2:'https://en.wikipedia.org/wiki/Badminton'}
+        ]
+
+
+
+let table = document.getElementById("tab");
+let row; 
+let column;
+let anchor;
+let image;
+
+for(let i = 0; i <2; i++){
+    row = document.createElement("tr");
+    table.append(row);
+
+    for(let j = 0; j< 5;j++){
+        column = document.createElement("td");
+        row.append(column);
+        if(i == 0){
+            column.innerText = `${arr[j].name}`;
+            column.setAttribute('style',"border:2px solid pink");
+            column.setAttribute('align',"center");
+        }
+        else{
+            anchor = document.createElement("a");
+            column.append(anchor);
+            column.setAttribute('style',"border:2px solid blue")
+            image = document.createElement("img");
+            anchor.append(image);
+            anchor.setAttribute("href",`${arr[j].url2}`);
+            image.setAttribute("src",`${arr[j].url1}`);
+            image.setAttribute("height","200px");
+            image.setAttribute("width","200px");
+            image.setAttribute("alt","Image not found");
+            image.setAttribute("style",'img:hover')
+            // image.id="image"
+            // function mouseover(){
+            //     document.getElementById("image").style.color="red"
+            // }            
+            // image.setAttribute('onmouseover',"mouseover()")
+        }
+        
+
+    }
+
+}
+
+
+console.log(table)
+</script>
+
+
+
+
+
+</body>
+</html>

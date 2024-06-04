@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container">
+   
+    </div>
+   
+    <script>
+        let container = document.getElementById("container");
+        let input = document.createElement("input");
+        input.type="text";
+
+        let btn1 = document.createElement("button");
+        btn1.innerText="red";
+        let btn2 = document.createElement("button");
+        btn2.innerText="blue";
+
+        let btn3 = document.createElement("button");
+        btn3.innerText="black";
+
+        let btn4 = document.createElement("button");
+        btn4.innerText="orange";
+
+        btn1.addEventListener('click',()=>{
+            input.style.backgroundColor="red";
+        })
+
+        btn2.addEventListener('click',()=>{
+            input.style.backgroundColor="blue";
+        })
+
+        btn3.addEventListener('click',()=>{
+            input.style.backgroundColor="black";
+        })
+
+        btn4.addEventListener('click',()=>{
+            input.style.backgroundColor="orange";
+        })
+
+
+
+
+
+        container.append(input,btn1,btn2,btn3,btn4  )
+        console.log(container)
+
+
+
+
+    </script>
+
+</body>
+</html>

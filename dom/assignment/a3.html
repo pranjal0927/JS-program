@@ -30,12 +30,19 @@
                 btn2.disabled=false;
             }
             
+            if(count <10){
+                input.style.backgroundColor='red'
+            }
+            else{
+                input.style.backgroundColor="green"
+            }           
 
         }
 
         btn1.addEventListener('click',()=>{
             count++;    
             test();
+ 
         })
         btn2.addEventListener('click',()=>{
             count--;

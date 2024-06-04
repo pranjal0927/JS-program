@@ -15,14 +15,24 @@
         let button = document.createElement('button')
         button.innerText="unique text"
         container.append(input,button)
-
         input.style.height="200px"
         input.style.width="200px"
 
-        // button.addEventListener('click',()=>{
-        //         input.value=`lorem${Math.trunc(Math.random()*10)}`
+        let count = 0;
+        function colorChange(){
+            if(count >10){
+                input.style.backgroundColor="green"
+            }
+            else{
+                input.style.backgroundColor="red"
+            }
+        }
+        button.addEventListener('click',()=>{
+            count++;
+            input.value=`lorem${Math.trunc(Math.random()*10)}`
+            colorChange();
 
-        // })
+        })
 
 
     </script>

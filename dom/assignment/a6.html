@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 id="head1"></h2>
+    <h2 id="head2"></h2>
+
+<script>
+
+let head1 = document.getElementById('head1');
+let head2 = document.getElementById('head2')
+let user = prompt("enter username")
+head2.innerText = user;
+let arr = ["pranjal","jyotiprakash","vipul","nirmal"]
+let flag = false;
+let result = arr.find((item)=>{
+    if(item == user){
+        head2.innerText="Username exist";
+        return flag = true;        
+    }
+})
+
+if(flag== false){
+    arr.push(user);
+    head2.innerText = "Username added";
+
+}
+
+console.log(arr)
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

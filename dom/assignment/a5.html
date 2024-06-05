@@ -17,13 +17,13 @@
 <script>
     
     let container = document.getElementById('container');
-    let amount = prompt("enter amount")
+    let amount = +prompt("enter amount")
     let head1 = document.getElementById('head1')
     head1.innerText=`Current balance is : ${amount}`
 
-    let choice = prompt("enter choice");
+    let choice = +prompt("enter choice");
     if(choice == 1){
-        let credit =prompt(`enter credit amount`);
+        let credit =+prompt(`enter credit amount`);
         let head2 = document.getElementById('head2')
         head2.innerText=`credit amount is :${credit}`
         let total = amount + credit;
@@ -32,11 +32,19 @@
     }
     if(choice == 2){
         let debit =prompt("enter debit amount");
+
+        if(debit>amount){
+            head3.innerText="Insufficient balance";
+        }
+        else{
         let head2 = document.getElementById('head2')
         head2.innerText=`debit amount is :${debit}`
         let total = amount - debit;
         let head3 = document.getElementById('head3')
         head3.innerText=`total balance is: ${total}`
+ 
+
+        }
     }
 
 </script>

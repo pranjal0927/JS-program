@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Electicity bill</h1>
+
+    <div id="container">
+        <table>
+            <tr>
+                <td>
+                    <label for="">Unit consumption</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter Units" name="" id="unit">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Category</label>
+                </td>
+                <td>
+                    <select name="" id="category">
+                        <option value="1">General</option>
+                        <option value="2">OBC</option>
+                        <option value="3">Others</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="">Customer name</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter name" name="" id="name">
+                </td>
+            </tr>
+        </table>
+        <button id="btn">Click here</button>
+    </div>
+
+<script>
+    let btn = document.getElementById('btn')
+ 
+    btn.addEventListener('click',(e)=>{
+        e.preventDefault()
+        let unit = document.getElementById('unit');
+        let category = document.getElementById('category');
+        let name = document.getElementById('name');
+        let temp = 0;
+
+        if(!unit.value || !category.value || !name.value){
+            alert('please fill all the input box')
+        } 
+
+
+        if(category.value == 1){
+            if(unit.value < 100 && unit.value != "")
+            {
+                alert('free')           
+            }
+            if(unit.value > 100 && unit.value < 300){
+                temp = unit.value - 100;
+                temp *= 8;
+                alert(`amount to be paid ${temp}`)
+            }
+            if(unit.value > 300){
+                temp = unit.value - 100;
+                temp *= 15;
+                alert(`amount to be paid ${temp}`)
+            }
+        }
+
+        if(category.value == 2){
+            if(unit.value < 200)
+            {
+                alert('free')           
+            }
+            if(unit.value > 200 && unit.value < 400){
+                temp = unit.value - 100;
+                temp *= 8;
+                alert(`amount to be paid ${temp}`)
+            }
+            if(unit.value > 400){
+                temp = unit.value - 100;
+                temp *= 15;
+                alert(`amount to be paid ${temp}`)
+            }
+        }
+
+        if(category.value == 3){
+            if(unit.value < 500)
+            {
+                alert('free')           
+            }
+            if(unit.value > 500){
+                temp = unit.value *15;
+                alert(`amount to be paid ${temp}`)
+            }
+        }
+
+
+    })
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Username check</h1>
+    <div id="container">
+        <input type="text" name="" id="input">
+        <button id="btn">click</button>
+    </div>
+
+    <script>
+        let container = document.getElementById('container');
+        let input = document.getElementById('input');
+        let br = document.createElement('br');
+        let head = document.createElement('h3');
+        let arr = ['pranjal','rohit','karan'];
+        let flag = true;
+        let allUser = document.getElementById('btn')
+        let result = arr.find((item)=>{
+            if(input.value == item){
+                head.innerText="user exits"
+                flg = true;
+            }
+
+            if(flag == false){
+                arr.push(input.value);
+                head.innerText="username updated"        
+                allUser.value=arr.join(',');
+            }
+        container.append(head)
+        })
+
+
+
+ 
+    </script>
+
+
+    
+    
+</body>
+</html>

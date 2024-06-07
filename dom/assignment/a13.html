@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>guess number</h1>
+    <div id="container">
+<button id="btn">click</button>
+    </div>
+
+    <script>
+        let container = document.getElementById('container');
+        let randomNumber = Math.floor(Math.random()*10);
+        for(let i = 0; i < 3; i++){
+            let userInput = document.createElement('input');
+            userInput.style.margin="10px";
+            userInput.setAttribute('placeholder',"enter guss number")
+            userInput.id=`id${i}`
+            let br = document.createElement('br')
+            container.prepend(userInput,br);
+        }
+
+        let id2 = document.getElementById('id2');
+        let id3 = document.getElementById('id3');
+        let id1 = document.getElementById('id1');
+
+   
+    let btn = document.getElementById('btn');
+    btn.addEventListener('click',()=>{
+
+        if(id2.value == 10 && id1.value== 11 && id0.value==14){
+            alert('exe')
+        }
+        if(id2.value==10 & id1.value ==11 || id2.value ==10 && id0.value==14|| id1.value==11 && id0.value==14){
+            alert('good')
+        }   
+        if(id2.value == 10 || id1.value==11 || id0.value==14){
+            alert('can do better')
+        }
+        else{
+            alert('better luck next time')
+        }
+    })
+
+   
+    
+
+        console.log(container);
+        
+
+
+    </script>
+
+
+
+</body>
+</html>

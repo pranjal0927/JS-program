@@ -10,6 +10,7 @@
     <div id="container">
         <input type="text" name="" id="input">
         <button id="btn">click</button>
+        <button id="allUser">all user</button>
     </div>
 
     <script>
@@ -18,29 +19,27 @@
         let br = document.createElement('br');
         let head = document.createElement('h3');
         let arr = ['pranjal','rohit','karan'];
-        let flag = true;
-        let allUser = document.getElementById('btn')
-        let result = arr.find((item)=>{
-            if(input.value == item){
-                head.innerText="user exits"
-                flg = true;
-            }
+        let flag = false;
+        let btn = document.getElementById('btn');
 
-            if(flag == false){
+        btn.addEventListener('click', () => {
+            let result = arr.find(item => {
+                if(input.value === item) {
+                    head.innerText = "User exists";
+                    flag = true;
+                }
+            });
+
+            if(flag == false) {
                 arr.push(input.value);
-                head.innerText="username updated"        
-                allUser.value=arr.join(',');
+                head.innerText = "Username updated";
+                let allUsers = document.getElementById('allUsers'); 
+                allUsers.innerText = arr.join(', '); 
             }
-        container.append(head)
-        })
 
+            container.appendChild(head);
+        });
 
-
- 
     </script>
-
-
-    
-    
 </body>
 </html>

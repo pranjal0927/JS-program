@@ -24,7 +24,7 @@
 
         btn.addEventListener('click', () => {
             let result = arr.find(item => {
-                if(input.value === item) {
+                if(input.value == item) {
                     head.innerText = "User exists";
                     flag = true;
                 }
@@ -33,10 +33,9 @@
             if(flag == false) {
                 arr.push(input.value);
                 head.innerText = "Username updated";
-                let allUsers = document.getElementById('allUsers'); 
-                allUsers.innerText = arr.join(', '); 
             }
-
+            let allUser = document.getElementById("allUser")
+            allUser.innerText=arr.join()
             container.appendChild(head);
         });
 

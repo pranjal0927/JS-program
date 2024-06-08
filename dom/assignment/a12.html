@@ -17,7 +17,7 @@
                     <label for="">Unit consumption</label>
                 </td>
                 <td>
-                    <input type="text" placeholder="Enter Units" name="" id="unit">
+                    <input type="number" placeholder="Enter Units" name="" id="unit">
                 </td>
             </tr>
             <tr>
@@ -59,7 +59,7 @@
 
 
         if(category.value == 1){
-            if(unit.value < 100 && unit.value != "")
+            if(unit.value <= 100 && unit.value != "")
             {
                 alert('free')           
             }

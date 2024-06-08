@@ -24,9 +24,10 @@ button.addEventListener('click',(e)=>{
     count++;
     let input1 = document.createElement('input')
     input1.value = input.value; 
+    input.value = ""
     let br = document.createElement('br')
     container.append(input1,br)
-    button.textContent=count;
+    button.textContent=`Submit ${count}`;
 })
 console.log(container)
 

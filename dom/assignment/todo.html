@@ -32,12 +32,12 @@
             <div class="col col-lg-3">
                 <select class="form-select" aria-label="default select example" id="">
                     <option selected>open this to select</option>
-                    <option value="1">A-Z</option>
+                    <option value="1" onclick="az()">A-Z</option>
                     <option value="2">a-z</option>
                 </select>
             </div>
             <div class="col col-lg-3 text-center">
-                <label for="" class="form-label" id="">Total Count: <span id="count"></span></label>
+                <label for="" class="form-label" id="">Total Count: <span id="count">0</span></label>
             </div>
             <div class="col col-lg-3">
                 <input type="button" value="Delete All" class="btn btn-danger" id="deleteAll">
@@ -84,7 +84,7 @@
         deleteAll.addEventListener('click', () => {
             globalArray = [];
             print(globalArray);
-            count.innerText=""
+            count.innerText="";
         })
 
     function edit(id){
@@ -92,14 +92,21 @@
             if(editText){
                 msg.value = editText.msg;
                 globalArray = globalArray.filter(item => item.id !== id);
-                print(globalArray)
+                print(globalArray);
             }    
         }
 
     function deleteText(id){
       
         globalArray = globalArray.filter(item => item.id !==id);
-        print(globalArray)
+        print(globalArray);
+        count.innerText="";
+
+    }
+
+    function az(){
+        msg.sort();
+        console.log(msg)
     }
 
         function print() {
@@ -121,9 +128,3 @@
     </script>
 
 </body>
-
-<<<<<<< HEAD
-</html>
-=======
-</html>
->>>>>>> 5be1546980e613041b8a986aa9757b44c617aa2e

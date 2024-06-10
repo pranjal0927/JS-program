@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .active{
+        display: block;
+    }
+    .inactive{
+        display: none;
+    }
+
+</style>
+
+</head>
+<body>
+    
+    <div id="container1" class="inactive">hey, i am pranjal borole</div>
+    <button id="btn1" onclick="status()">click here</button>
+
+<script>
+    let button = document.getElementById('btn1')
+    let isActive = false;
+
+    function status(){
+        isActive=!isActive;
+        
+        let container1 = document.getElementById('container1')
+        if(isActive)
+        {
+            container1.classList.remove('inactive')
+            container1.classList.add('active')
+        }
+        else{
+            container1.classList.add('inactive')
+            container1.classList.remove('active')
+        }
+
+    }
+
+</script>
+
+
+</body>
+</html>

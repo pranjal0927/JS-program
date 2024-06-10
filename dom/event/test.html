@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="input">
+        <button id="btn1">button 1</button>
+        <button id="btn2">button 2</button>
+    </div>
+    <div class="output">
+        <h1 id="head1" ></h1>
+        <h1 id="head2"></h1>
+    </div>
+</div>
+
+<script>
+
+    let button1 = document.getElementById('btn1')
+    let button2= document.getElementById('btn2')
+    let head1 = document.getElementById('head1')
+    let head2 = document.getElementById('head2')
+
+    
+    
+    button1.addEventListener('click',()=>{
+        head1.innerText="hello pranjal"
+        head1.style.backgroundColor="red"
+    })
+
+    button2.addEventListener('click',()=>{
+        head1.innerText="bye pranjal"
+        head1.style.backgroundColor="green"
+    })
+
+</script>    
+
+    
+</body>
+</html>

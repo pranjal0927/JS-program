@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="content">
+
+</div>    
+<script>
+let content = document.getElementById("content")
+let head = document.createElement("h1");
+head.innerText="hello world";
+head.id="head";
+content.append(head)
+console.log(head)
+
+head.setAttribute('onmouseover',"mouseOver()")
+head.setAttribute('onmouseout','mouseOut()')
+
+function mouseOver(){
+    document.getElementById("head").style.color="red"
+}
+function mouseOut(){
+    document.getElementById("head").style.color="black" 
+
+}
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

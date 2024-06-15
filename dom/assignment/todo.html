@@ -98,7 +98,11 @@
 
     function deleteText(id){
       
-        globalArray = globalArray.filter(item => item.id !==id);
+        globalArray = globalArray.filter((item) =>{
+            if(item.id !==id){
+                return item
+            }
+        });
         print(globalArray);
         count.innerText="";
 

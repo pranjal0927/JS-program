@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1 id="head1">00</h1>
+        <h1 id="head2">00</h1>
+        <h1 id="head3">00</h1>
+        <h1 id="head4">00</h1>
+        <button id="btn1">Start</button>
+        <button id="btn2">Stop</button>
+        <button id="btn3">Reset</button>
+    </div>
+
+    <script>
+        let head1 = document.getElementById('head1');
+        let head2 = document.getElementById('head2');
+        let head3 = document.getElementById('head3');
+        let head4 = document.getElementById('head4');
+
+        let button1 = document.getElementById('btn1');
+        let button2 = document.getElementById('btn2');
+        let button3 = document.getElementById('btn3');
+
+        let i = 0;
+        let j = 0;
+        let k = 0;
+        let l = 0;
+
+        let milisecIntervalId;
+        let secIntervalId;
+        let minIntervalId;
+        let hourIntervalId;
+
+        function stopWatch() {
+            try {
+                milisecIntervalId = setInterval(() => {
+                    head4.innerText = `${i < 10 ? '0' + i : i}`;
+                    i++;
+                    if (i > 99) {
+                        i = 0;
+                    }
+                }, 10);
+
+                secIntervalId = setInterval(() => {
+                    head3.innerText = `${j < 10 ? '0' + j : j}`;
+                    j++;
+                    if (j > 59) {
+                        j = 0;
+                    }
+                }, 1000);
+
+                minIntervalId = setInterval(() => {
+                    head2.innerText = `${k < 10 ? '0' + k : k}`;
+                    k++;
+                    if (k > 59) {
+                        k = 0;
+                    }
+                }, 60000);
+
+                hourIntervalId = setInterval(() => {
+                    head1.innerText = `${l < 10 ? '0' + l : l}`;
+                    l++;
+                    if (l > 11) {
+                        l = 0;
+                    }
+                }, 3600000);
+
+            } catch (e) {
+                console.error(e.message);
+            }
+        }
+
+        button1.addEventListener('click', () => {
+            stopWatch();
+        });
+
+        button2.addEventListener('click', () => {
+            clearInterval(milisecIntervalId);
+            clearInterval(secIntervalId);
+            clearInterval(minIntervalId);
+            clearInterval(hourIntervalId);
+        });
+
+        button3.addEventListener('click',()=>{
+        })
+
+</script>
+
+</body>
+
+</html>

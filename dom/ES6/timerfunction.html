@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>timer function</h1>
+
+    <script>
+        /*
+                      setTimeout(()=>{
+                            console.log("hello 2")
+                        },2000);
+                    }
+                    timer()
+                         console.log("hello 1");
+        
+                    function timer(){
+                 console.log('hello 3')
+                    console.log('hello 4');
+        
+        */
+
+        /*
+        let i = 0;
+        
+        let z = '';
+        while(z<5){
+            if(z) clearInterval(z);
+        z = setTimeout(()=>{
+            console.log('hello how are you');
+        },2000);
+        i++;
+        }
+        */
+
+        let timer = 1;
+        let intervalId= setInterval(()=>{
+            ++timer;
+            console.log('hello');
+        },2000);
+
+        setTimeout(()=>{
+            clearInterval(intervalId);
+        },4000)
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Asynchronous</h1>
+
+    <script>
+/*
+        console.log('hello 1')
+        let i =0;
+        while(i<100000){
+            console.log('hello 2');
+            i++
+        }
+        console.log('hello 3')
+*/
+
+        let x = new Promise((res,rej)=>{
+            console.log('hello 1')
+        let i =0;
+        while(i<10000){
+            res('hello 2');
+            i++
+        }
+        console.log('hello 3')
+            
+        })
+
+        console.log(x);
+
+
+    </script>
+
+</body>
+</html>

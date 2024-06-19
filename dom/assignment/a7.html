@@ -4,72 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<!-- bootstrap CSS link -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <style>
-        .content{
-            width: 400px;;
-        }
-        .inactive{
-            display: none;
-        }
-        .active{
-            display: block;
-        }
-
-    </style>
-
+<style>
+.content_root{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(242, 224, 242);
+    width: 100%;
+    height: 100%;
+}
+.disp{
+    display: none;
+}
+.content{
+    position: relative;
+    top: 50;
+    opacity: 0.9;
+}
+</style>
 </head>
 <body>
-    <div class="container  ">
-        <div class="row">
-            <div class="col-5 mx-auto mt-5">
-                <div class="btn btn-danger p-2 "id ="btn" style="width: 500px; font-size: 30px;">Toogle</div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-10 content mx-auto mt-3">
-                <p id="para" class="inactive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laudantium commodi eaque amet soluta est velit aut vel, nesciunt omnis dolore et, nam quia nostrum unde, similique aperiam nihil? Pariatur?*1</p>
+    <div class="d-grid gap-2 col-6 mx-auto mt-3">
+        <button class="btn btn-danger toggle-button" style="z-index: 2 !important;">Click here</button>
+    </div>
+    <div class="content_root disp">
+        <div class="content">
+            <div class="container">
+                <div class="row justify-content-center mt-5 bg-light">
+                    <div class="col-11">
+                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque recusandae tenetur soluta tempora qui distinctio, ipsam commodi! Quasi voluptate dolorum fuga nostrum? Quos nobis sit optio, facilis quidem atque praesentium excepturi cupiditate ipsum deleniti recusandae, molestias quae corporis. Perferendis iste possimus perspiciatis id rerum quod consequatur quo maxime alias nisi!</h1>
+                    </div>
+                    <div class="col-1">
+                        <button class="ms-5 close">&otimes;</button>
+                    </div>
+                </div>
             </div>
-            
         </div>
     </div>
-    
+
     <script>
+        let button = document.querySelector('.toggle-button');
+        let content_root = document.querySelector('.content_root');
+        let close = document.querySelector('.close');
 
-let container = document.getElementsByClassName('container');
-let button = document.getElementById('btn');
-let para = document.getElementById('para');
-let isActive = false;
+        button.addEventListener('click',()=>{
+            content_root.classList.remove('disp');
+        })
+        close.addEventListener('click',()=>{
+            content_root.classList.add('disp');
+        })
+        window.addEventListener('click',(e)=>{
+            if(e.target == content_root){
+                content_root.classList.add('disp')
+            }
+        })
+        window.addEventListener('keyup',(e)=>{
+            if(e.key == 'Escape'){
+                content_root.classList.add('disp')
 
-function show(){
-    isActive = !isActive;
-    if(isActive){
-    para.classList.remove('inactive');
-    para.classList.add('active');
-    }
-    else{
-        para.classList.remove('active');
-        para.classList.add('inactive')
-    }
-}
-
-function hide(){
-    para.classList.add('inactive');
-}
-
-button.addEventListener('click',show);
-window.addEventListener('click',hide)
-
-
-
+            }
+        })
     </script>
 
 
 
 
+
+
+
+
+    <!-- bootstrap JS link  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+

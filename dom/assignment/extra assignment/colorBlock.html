@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            gap: 10px;
+        }
+        button {
+            width: 100px;
+            height: 50px;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <div id="container"></div>
+    <script>
+        const container = document.getElementById('container');
+        const startButton = document.getElementById('start');
+        const stopButton = document.getElementById('stop');
+        let intervalId;
+
+        // Create 16 boxes
+
+        for (let i = 1; i <= 16; i++) {
+            let box = document.createElement("div");
+            box.id = `id${i}`;
+            box.style.height="100px";
+            box.style.width="100px";
+            box.style.border="1px solid black";
+            box.className = 'box';
+            container.append(box);
+        }
+
+        // Random color code
+
+        function randomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Change color in each box
+
+        function changeColor() {
+            const boxes = document.querySelectorAll('.box');
+            boxes.forEach((box, index) => {
+                setTimeout(() => {
+                    box.style.backgroundColor = randomColor();
+                    
+                    //reset to white color
+                    
+                    if (index === boxes.length - 1) {
+                        setTimeout(() => {
+                            boxes.forEach(box => box.style.backgroundColor = '#fff');
+                            changeColor(); 
+                        }, 1000);
+                    }
+                }, index * 1000);
+            });
+        }
+
+        // Start button event
+
+        startButton.addEventListener('click', () => {
+            changeColor();
+            intervalId = setInterval(() => {
+                changeColor();
+            }, 16000); // Ensure the interval is long enough for one complete cycle
+        });
+
+        // Stop button event
+         
+        stopButton.addEventListener('click', () => {
+            clearInterval(intervalId);
+        });
+    </script>
+</body>
+</html>
